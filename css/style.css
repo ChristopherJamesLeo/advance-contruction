@@ -33,7 +33,7 @@ header {
     width: 100%;
     padding: 0px 100px;
     background-color: var(--global-header-bg-color);
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 2;
@@ -41,6 +41,7 @@ header {
 }
 @media (max-width : 768px){
     .sub_header {
+        /* position: static; */
         width: 100%;
         padding: 0px 20px;
     
@@ -74,11 +75,15 @@ header {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 100;
     animation: navbarani 0.5s linear 0s 1 forwards;
 }
+.sub_header.active .navbar-nav {
+    
+}
 @media (max-width : 992px){
-    .sub_header.active .navbar {
-        /* position: static; */
+    .sub_header.active .navbar-nav {
+        
     }
 }
 @keyframes navbarani{
@@ -111,9 +116,12 @@ header {
     background-color: var(--global-white-color);
     border-radius: 5px;
 }
+
 .navbar-nav li {
     padding: 5px 10px;
+    
 }
+
 .navbar-nav li a {
     color: var(--global-white-color);
     font-size: 14px;
@@ -121,6 +129,9 @@ header {
 }
 .navbar-nav li a:hover {
     color: var(--global-secondary-color);
+}
+.navbar-nav li a.active {
+    color: var(--global-secondary-color) !important;
 }
 .navbar-nav .contact_btn:last-of-type{
     padding: 5px 20px;
@@ -132,6 +143,7 @@ header {
 
     position: relative;
     overflow: hidden;
+    z-index: 100;
 
     cursor: pointer;
 
@@ -151,7 +163,7 @@ header {
     transition: all 0.4s ease 0s;
 }
 .navbar-nav .contact_btn:last-of-type:hover::before{
-    transform: translateX(0);
+    transform: translateX(100%);
 }
 .primary_menu {
     position: relative;
@@ -1100,3 +1112,21 @@ footer {
 }
 /* End Instagram modal section */
 
+
+/* ---------------------- */
+/* ------service detail ---------- */
+/* ---------------------- */
+@media(max-width : 768px){
+    .banner_content.service_detail_header h1{
+        font-size: 40px;
+    }
+}
+
+.service_detail h2 {
+    color: var(--global-text-color);
+    font-size: 30px;
+
+}
+.service_detail p {
+    font-weight: 300;
+}

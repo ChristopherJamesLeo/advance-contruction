@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var getScrollTop = $(this).scrollTop();
         // console.log(getScrollTop)
-        if(getScrollTop > 150){
+        if(getScrollTop > 400){
             $(".sub_header").addClass("active");
         }else {
             $(".sub_header").removeClass("active");
