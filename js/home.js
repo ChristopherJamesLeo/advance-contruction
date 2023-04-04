@@ -8,10 +8,10 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var getScrollTop = $(this).scrollTop();
         // console.log(getScrollTop)
-        if(getScrollTop > 400){
+        if(getScrollTop > 500){
             $(".sub_header").addClass("active");
         }else {
-            $(".sub_header").removeClass("active");
+            $(".sub_header").removeClass("active");    
         }
     })
     // end navbar
